@@ -6,8 +6,8 @@ import org.jetbrains.compose.resources.ExperimentalResourceApi
 @Composable
 fun App() {
     MaterialTheme {
-        WelcomeScreen()
-        //ScoreScreen("10/10")
+        //WelcomeScreen()
+        ScoreScreen("10/10")
     }
 }
 
