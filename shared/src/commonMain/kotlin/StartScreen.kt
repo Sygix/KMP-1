@@ -17,10 +17,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import moe.tlaster.precompose.navigation.Navigator
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun WelcomeScreen() {
+fun StartScreen(navigator: Navigator) {
     Column(
         Modifier.fillMaxSize().background(Color(0xFF1E1E1E)),
         verticalArrangement =  Arrangement.Center,
@@ -38,16 +39,16 @@ fun WelcomeScreen() {
                 modifier = Modifier.padding(20.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text("Quizz", fontSize = 24.sp, modifier = Modifier.padding(vertical = 5.dp))
+                Text("Quiz", fontSize = 24.sp, modifier = Modifier.padding(vertical = 5.dp))
                 Text("A simple Quiz to discovers KMP and compose.", modifier = Modifier.padding(vertical = 5.dp))
                 Button(
-                    onClick = { /* Do something */ },
+                    onClick = { navigator.navigate("/quiz") },
                     modifier = Modifier.padding(vertical = 5.dp),
                     shape = RoundedCornerShape(100),
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFFF3D00)),
                     elevation = ButtonDefaults.elevation(0.dp)
                 ){
-                    Text("Start the Quizz")
+                    Text("Start the Quiz")
                 }
             }
         }

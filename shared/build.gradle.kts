@@ -28,6 +28,10 @@ kotlin {
                 implementation(compose.material)
                 @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
                 implementation(compose.components.resources)
+                //Add precompose dependency
+                api("moe.tlaster:precompose:1.5.7")
+                api(compose.foundation)
+                api(compose.animation)
             }
         }
         val androidMain by getting {

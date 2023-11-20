@@ -26,10 +26,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import moe.tlaster.precompose.navigation.Navigator
 import network.data.Quiz
 
 @Composable
-fun QuestionScreen(quiz: Quiz) {
+fun QuizScreen(navigator: Navigator, quiz: Quiz) {
 
     var questionProgress by remember { mutableStateOf(0) }
     var selectedAnswer by remember { mutableStateOf(1) }
@@ -44,6 +45,7 @@ fun QuestionScreen(quiz: Quiz) {
             score++
         }
         if(quiz.questions.size - 1 <= questionProgress) {
+            navigator.navigate("/score/$score")
             return
         }
         questionProgress++
