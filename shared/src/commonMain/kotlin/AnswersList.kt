@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 import network.data.Answer
 
 @Composable
-fun AnswersScreen(answers: List<Answer>, selectedAnswer: Int, onAnswerSelected: (Int) -> Unit) {
+fun AnswersList(answers: List<Answer>, selectedAnswer: Int, onAnswerSelected: (Int) -> Unit) {
     Column(
         modifier = Modifier.padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally

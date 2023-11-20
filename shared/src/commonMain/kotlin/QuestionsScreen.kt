@@ -13,7 +13,6 @@ import androidx.compose.material.Icon
 import androidx.compose.material.LinearProgressIndicator
 import androidx.compose.material.Text
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowForward
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.runtime.Composable
@@ -40,12 +39,12 @@ fun QuestionScreen(quiz: Quiz) {
         selectedAnswer = answerId
     }
 
-    val submitAnswer: () -> Unit = {
-        if(quiz.questions.size - 1 >= questionProgress) {
-            //return ici
-        }
+    fun submitAnswer() {
         if (quiz.questions[questionProgress].correctAnswerId == selectedAnswer) {
             score++
+        }
+        if(quiz.questions.size - 1 <= questionProgress) {
+            return
         }
         questionProgress++
         selectedAnswer = 1
@@ -73,14 +72,14 @@ fun QuestionScreen(quiz: Quiz) {
             }
         }
 
-        AnswersScreen(quiz.questions[questionProgress].answers, selectedAnswer, onAnswerSelected)
+        AnswersList(quiz.questions[questionProgress].answers, selectedAnswer, onAnswerSelected)
 
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Bottom
         ) {
             Button(
-                onClick = submitAnswer,
+                onClick = { submitAnswer() },
                 modifier = Modifier.padding(vertical = 5.dp),
                 shape = RoundedCornerShape(100),
                 colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFFF3D00), contentColor = Color.White),

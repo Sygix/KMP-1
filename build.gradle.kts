@@ -5,4 +5,6 @@ plugins {
     id("com.android.application").apply(false)
     id("com.android.library").apply(false)
     id("org.jetbrains.compose").apply(false)
+    // Klint plugin to check code style
+    id("org.jlleitschuh.gradle.ktlint") version "11.6.1"
 }

@@ -1,3 +1,4 @@
+import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import network.data.Answer
@@ -35,7 +36,7 @@ fun App() {
             ),
             Question(
                 id = 3,
-                label = "What is the name of the platform used to create this app ?",
+                label = "What is the name of the platform where this app can be deployed ?",
                 answers = listOf(
                     Answer(id = 1, label = "Android"),
                     Answer(id = 2, label = "iOS"),
@@ -43,7 +44,29 @@ fun App() {
                     Answer(id = 4, label = "All of them")
                 ),
                 correctAnswerId = 4
-            )
+            ),
+            Question(
+                id = 4,
+                label = "What is the name of the authors of this app ?",
+                answers = listOf(
+                    Answer(id = 1, label = "Elon & Jeff"),
+                    Answer(id = 2, label = "Steve & Jobs"),
+                    Answer(id = 3, label = "Bill & Gates"),
+                    Answer(id = 4, label = "Simon & Rafael")
+                ),
+                correctAnswerId = 1
+            ),
+            Question(
+                id = 5,
+                label = "What is the name of the school where this app was created ?",
+                answers = listOf(
+                    Answer(id = 1, label = "42"),
+                    Answer(id = 2, label = "Epitech"),
+                    Answer(id = 3, label = "Efficom"),
+                    Answer(id = 4, label = "Modart")
+                ),
+                correctAnswerId = 3
+            ),
         )
     )
 
