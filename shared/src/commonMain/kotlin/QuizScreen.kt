@@ -1,3 +1,4 @@
+
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -27,10 +28,10 @@ import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import moe.tlaster.precompose.navigation.Navigator
-import network.data.Quiz
+import network.data.Question
 
 @Composable
-fun QuizScreen(navigator: Navigator, quiz: Quiz) {
+fun QuizScreen(navigator: Navigator, questions: List<Question>) {
 
     var questionProgress by remember { mutableStateOf(0) }
     var selectedAnswer by remember { mutableStateOf(1) }
@@ -41,10 +42,10 @@ fun QuizScreen(navigator: Navigator, quiz: Quiz) {
     }
 
     fun submitAnswer() {
-        if (quiz.questions[questionProgress].correctAnswerId == selectedAnswer) {
+        if (questions[questionProgress].correctAnswerId == selectedAnswer) {
             score++
         }
-        if(quiz.questions.size - 1 <= questionProgress) {
+        if(questions.size - 1 <= questionProgress) {
             navigator.navigate("/score/$score")
             return
         }
@@ -70,11 +71,11 @@ fun QuizScreen(navigator: Navigator, quiz: Quiz) {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text("Question : ", fontSize = 24.sp, modifier = Modifier.padding(vertical = 5.dp))
-                Text(quiz.questions[questionProgress].label, modifier = Modifier.padding(vertical = 5.dp))
+                Text(questions[questionProgress].label, modifier = Modifier.padding(vertical = 5.dp))
             }
         }
 
-        AnswersList(quiz.questions[questionProgress].answers, selectedAnswer, onAnswerSelected)
+        AnswersList(questions[questionProgress].answers, selectedAnswer, onAnswerSelected)
 
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -87,7 +88,7 @@ fun QuizScreen(navigator: Navigator, quiz: Quiz) {
                 colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFFF3D00), contentColor = Color.White),
                 elevation = ButtonDefaults.elevation(0.dp)
             ){
-                if(questionProgress >= quiz.questions.size - 1) {
+                if(questionProgress >= questions.size - 1) {
                     Text("Finish", modifier = Modifier.padding(vertical = 5.dp))
                     Icon(imageVector = Icons.Filled.Check, contentDescription = "Finish icon")
                 } else {
@@ -96,7 +97,7 @@ fun QuizScreen(navigator: Navigator, quiz: Quiz) {
                 }
             }
             LinearProgressIndicator(
-                progress = (questionProgress) / quiz.questions.size.toFloat(),
+                progress = (questionProgress) / questions.size.toFloat(),
                 modifier = Modifier.padding(20.dp),
                 color = Color(0xFFFF3D00),
                 strokeCap = StrokeCap.Round,
