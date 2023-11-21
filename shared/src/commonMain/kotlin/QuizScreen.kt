@@ -1,5 +1,6 @@
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -27,6 +28,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.StrokeCap
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.seiko.imageloader.rememberImagePainter
 import moe.tlaster.precompose.navigation.Navigator
 import network.data.Question
 
@@ -72,6 +74,10 @@ fun QuizScreen(navigator: Navigator, questions: List<Question>) {
             ) {
                 Text("Question : ", fontSize = 24.sp, modifier = Modifier.padding(vertical = 5.dp))
                 Text(questions[questionProgress].label, modifier = Modifier.padding(vertical = 5.dp))
+                Image(
+                    painter = rememberImagePainter(questions[questionProgress].imageUrl),
+                    contentDescription = "image"
+                )
             }
         }
 

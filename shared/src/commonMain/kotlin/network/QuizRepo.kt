@@ -21,10 +21,6 @@ class QuizRepo()  {
         updateRandomQuiz()
     }
 
-    fun refreshRandomQuiz() {
-        updateRandomQuiz()
-    }
-
     private suspend fun fetchQuiz(): List<Question> = QuizAPI().getQuiz().questions
     private suspend fun fetchRandomQuiz(): List<Question> = QuizAPI().getRandomQuiz().questions
 
@@ -34,9 +30,9 @@ class QuizRepo()  {
         }
     }
 
-    private fun updateRandomQuiz(){
+    fun updateRandomQuiz(){
         coroutineScope.launch {
-            _questionState.update { fetchRandomQuiz() }
+            _randomQuestionState.update { fetchRandomQuiz() }
         }
     }
 }

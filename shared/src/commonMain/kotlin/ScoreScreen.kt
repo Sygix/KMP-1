@@ -44,9 +44,9 @@ fun ScoreScreen(navigator: Navigator, score: String) {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text("Score", fontSize = 24.sp, modifier = Modifier.padding(vertical = 5.dp))
-                Text("You got $score.", modifier = Modifier.padding(vertical = 5.dp))
+                Text("You got $score/20", modifier = Modifier.padding(vertical = 5.dp))
                 Button(
-                    onClick = { navigator.navigate("/quiz") },
+                    onClick = { navigator.navigate("/start") },
                     modifier = Modifier.padding(vertical = 5.dp),
                     shape = RoundedCornerShape(100),
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFFF3D00)),
