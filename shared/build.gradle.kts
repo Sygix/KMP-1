@@ -40,6 +40,13 @@ kotlin {
                 api("moe.tlaster:precompose:1.5.7")
                 api(compose.foundation)
                 api(compose.animation)
+
+                //Add compose-imageloader library
+                api("io.github.qdsfdhvh:image-loader:1.7.1")
+                // optional - Moko Resources Decoder
+                api("io.github.qdsfdhvh:image-loader-extension-moko-resources:1.7.1")
+                // optional - Blur Interceptor (only support bitmap)
+                api("io.github.qdsfdhvh:image-loader-extension-blur:1.7.1")
             }
         }
         val androidMain by getting {
@@ -66,6 +73,9 @@ kotlin {
             dependencies {
                 implementation(compose.desktop.common)
                 implementation("io.ktor:ktor-client-apache:2.3.6") // for Desktop
+
+
+                api("io.github.qdsfdhvh:image-loader-extension-imageio:1.7.1")
             }
         }
     }

@@ -2,31 +2,235 @@
   "questions": [
     {
       "id": 1,
-      "label": "Quel Pokémon est surnommé le 'Maître des mers'?",
-      "correct_answer_id": 2,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png",
+      "label": "Quel Pokémon est surnommé le 'Seigneur des Mers'?",
+      "correct_answer_id": 3,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/130.png",
       "answers": [
-        {"id": 1, "label": "Sygix"},
-        {"id": 2, "label": "Rafael"},
-        {"id": 3, "label": "Lugia"},
+        {"id": 1, "label": "Kyogre"},
+        {"id": 2, "label": "Gyarados"},
+        {"id": 3, "label": "Léviator"},
         {"id": 4, "label": "Sharpedo"}
       ]
     },
     {
-      "id": 2,
-      "label": "Quel Pokémon est souvent associé à la Team Rocket dans la série animée ?",
-      "correct_answer_id": 2,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/52.png",
+      "id": 3,
+      "label": "Quel Pokémon évolue en Steelix lorsqu'il est échangé en tenant une Peau Métal?",
+      "correct_answer_id": 1,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/95.png",
       "answers": [
-        {"id": 1, "label": "Pikachu"},
-        {"id": 2, "label": "Miaouss"},
-        {"id": 3, "label": "Salamèche"},
-        {"id": 4, "label": "Bulbizarre"}
+        {"id": 1, "label": "Onix"},
+        {"id": 2, "label": "Scyther"},
+        {"id": 3, "label": "Magnemite"},
+        {"id": 4, "label": "Metal Coat"}
       ]
     },
     {
       "id": 3,
-      "label": "Quel est le Pokémon légendaire de la 4e génération associé au temps?",
+      "label": "Quel Pokémon est de type Eau?",
+      "correct_answer_id": 1,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png",
+      "answers": [
+        {"id": 1, "label": "Carapuce"},
+        {"id": 2, "label": "Bulbizarre"},
+        {"id": 3, "label": "Salamèche"},
+        {"id": 4, "label": "Pikachu"}
+      ]
+    },
+    {
+      "id": 4,
+      "label": "Quel Pokémon possède la capacité 'Hydroblast'?",
+      "correct_answer_id": 1,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/160.png",
+      "answers": [
+        {"id": 1, "label": "Aligatueur"},
+        {"id": 2, "label": "Swampert"},
+        {"id": 3, "label": "Blastoise"},
+        {"id": 4, "label": "Empoleon"}
+      ]
+    },
+    {
+      "id": 5,
+      "label": "Quel Pokémon est connu pour ses grandes ailes colorées?",
+      "correct_answer_id": 4,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/330.png",
+      "answers": [
+        {"id": 1, "label": "Salamence"},
+        {"id": 2, "label": "Rayquaza"},
+        {"id": 3, "label": "Altaria"},
+        {"id": 4, "label": "Libégon"}
+      ]
+    },
+    {
+      "id": 6,
+      "label": "Quel Pokémon est également connu sous le nom du 'M'?",
+      "correct_answer_id": 1,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+      "answers": [
+        {"id": 1, "label": "Mewtwo"},
+        {"id": 2, "label": "Mew"},
+        {"id": 3, "label": "Ditto"},
+        {"id": 4, "label": "Mewthree"}
+      ]
+    },
+    {
+      "id": 7,
+      "label": "Quel Pokémon possède la capacité 'Éruption'?",
+      "correct_answer_id": 3,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png",
+      "answers": [
+        {"id": 1, "label": "Entei"},
+        {"id": 2, "label": "Suicune"},
+        {"id": 3, "label": "Ho-Oh"},
+        {"id": 4, "label": "Lugia"}
+      ]
+    },
+    {
+      "id": 8,
+      "label": "Quel Pokémon est de type Spectre et Poison?",
+      "correct_answer_id": 2,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/94.png",
+      "answers": [
+        {"id": 1, "label": "Haunter"},
+        {"id": 2, "label": "Ectoplasma"},
+        {"id": 3, "label": "Drowzee"},
+        {"id": 4, "label": "Hypno"}
+      ]
+    },
+    {
+      "id": 9,
+      "label": "Quel Pokémon est associé au thème de l'espace?",
+      "correct_answer_id": 4,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/605.png",
+      "answers": [
+        {"id": 1, "label": "Cresselia"},
+        {"id": 2, "label": "Darkrai"},
+        {"id": 3, "label": "Mesprit"},
+        {"id": 4, "label": "Lewsor"}
+      ]
+    },
+    {
+      "id": 10,
+      "label": "Quel Pokémon possède la capacité 'Tricherie'?",
+      "correct_answer_id": 3,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/198.png",
+      "answers": [
+        {"id": 1, "label": "Honchkrow"},
+        {"id": 2, "label": "Murkrow"},
+        {"id": 3, "label": "Cornèbre"},
+        {"id": 4, "label": "Sableye"}
+      ]
+    },
+    {
+      "id": 11,
+      "label": "Quel Pokémon est également connu sous le nom de 'Ho-Oh'?",
+      "correct_answer_id": 2,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/250.png",
+      "answers": [
+        {"id": 1, "label": "Lugia"},
+        {"id": 2, "label": "Ho-Oh"},
+        {"id": 3, "label": "Suicune"},
+        {"id": 4, "label": "Entei"}
+      ]
+    },
+    {
+      "id": 12,
+      "label": "Quel Pokémon possède la capacité 'Vent Glace'?",
+      "correct_answer_id": 4,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/131.png",
+      "answers": [
+        {"id": 1, "label": "Vaporeon"},
+        {"id": 2, "label": "Jolteon"},
+        {"id": 3, "label": "Flareon"},
+        {"id": 4, "label": "Lokhlass"}
+      ]
+    },
+    {
+      "id": 13,
+      "label": "Quel Pokémon est connu pour être le 'Gardien de la Forêt'?",
+      "correct_answer_id": 1,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/251.png",
+      "answers": [
+        {"id": 1, "label": "Celebi"},
+        {"id": 2, "label": "Etouraptor"},
+        {"id": 3, "label": "Quenetor"},
+        {"id": 4, "label": "Dialga"}
+      ]
+    },
+    {
+      "id": 14,
+      "label": "Quel Pokémon est de type Dragon et Vol?",
+      "correct_answer_id": 3,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/149.png",
+      "answers": [
+        {"id": 1, "label": "Garchomp"},
+        {"id": 2, "label": "Salamence"},
+        {"id": 3, "label": "Dracolosse"},
+        {"id": 4, "label": "Rayquaza"}
+      ]
+    },
+    {
+      "id": 15,
+      "label": "Quel Pokémon est le maître de la météo dans la région de Hoenn?",
+      "correct_answer_id": 4,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/384.png",
+      "answers": [
+        {"id": 1, "label": "Groudon"},
+        {"id": 2, "label": "Kyogre"},
+        {"id": 3, "label": "Ho-oh"},
+        {"id": 4, "label": "Rayquaza"}
+      ]
+    },
+    {
+      "id": 16,
+      "label": "Quel Pokémon est connu pour être le 'Seigneur de l'Évolution'?",
+      "correct_answer_id": 2,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png",
+      "answers": [
+        {"id": 1, "label": "Dusknoir"},
+        {"id": 2, "label": "Métamorph"},
+        {"id": 3, "label": "Froslass"},
+        {"id": 4, "label": "Honchkrow"}
+      ]
+    },
+    {
+      "id": 17,
+      "label": "Quel Pokémon est également connu sous le nom de 'Crocrodil'?",
+      "correct_answer_id": 3,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/159.png",
+      "answers": [
+        {"id": 1, "label": "Feraligatr"},
+        {"id": 2, "label": "Totodile"},
+        {"id": 3, "label": "Crocrodil"},
+        {"id": 4, "label": "Grovyle"}
+      ]
+    },
+    {
+      "id": 18,
+      "label": "Quel Pokémon est connu pour ses attaques électriques?",
+      "correct_answer_id": 4,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/479.png",
+      "answers": [
+        {"id": 1, "label": "Luxray"},
+        {"id": 2, "label": "Manectric"},
+        {"id": 3, "label": "Electivire"},
+        {"id": 4, "label": "Motisma"}
+      ]
+    },
+    {
+      "id": 19,
+      "label": "Quel Pokémon possède la capacité 'Ectoplasma'?",
+      "correct_answer_id": 2,
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/429.png",
+      "answers": [
+        {"id": 1, "label": "Giratina"},
+        {"id": 2, "label": "Magirêve"},
+        {"id": 3, "label": "Dusknoir"},
+        {"id": 4, "label": "Drifloon"}
+      ]
+    },
+    {
+      "id": 20,
+      "label": "Quel Pokémon est connu pour être le 'Seigneur du Temps'?",
       "correct_answer_id": 1,
       "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/483.png",
       "answers": [
@@ -34,210 +238,6 @@
         {"id": 2, "label": "Palkia"},
         {"id": 3, "label": "Giratina"},
         {"id": 4, "label": "Arceus"}
-      ]
-    },
-    {
-      "id": 4,
-      "label": "Quel Pokémon est connu pour ses pouvoirs psychiques et sa cuillère?",
-      "correct_answer_id": 2,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/65.png",
-      "answers": [
-        {"id": 1, "label": "Alakazam"},
-        {"id": 2, "label": "Kadabra"},
-        {"id": 3, "label": "Mewtwo"},
-        {"id": 4, "label": "Abra"}
-      ]
-    },
-    {
-      "id": 5,
-      "label": "Quel Pokémon est le partenaire de Sacha (Ash) dans la série animée?",
-      "correct_answer_id": 1,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png",
-      "answers": [
-        {"id": 1, "label": "Pikachu"},
-        {"id": 2, "label": "Charmander"},
-        {"id": 3, "label": "Bulbasaur"},
-        {"id": 4, "label": "Squirtle"}
-      ]
-    },
-    {
-      "id": 6,
-      "label": "Quel Pokémon évolue en Dracaufeu ?",
-      "correct_answer_id": 1,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png",
-      "answers": [
-        {"id": 1, "label": "Salamèche"},
-        {"id": 2, "label": "Reptincel"},
-        {"id": 3, "label": "Atchoum"},
-        {"id": 4, "label": "Méga-Dracaufeu X"}
-      ]
-    },
-    {
-      "id": 7,
-      "label": "Quel Pokémon légendaire est associé à la création du monde dans la mythologie Pokémon?",
-      "correct_answer_id": 1,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png",
-      "answers": [
-        {"id": 1, "label": "Arceus"},
-        {"id": 2, "label": "Dialga"},
-        {"id": 3, "label": "Palkia"},
-        {"id": 4, "label": "Giratina"}
-      ]
-    },
-    {
-      "id": 8,
-      "label": "Quel sont les Oiseaux légendaire emblématique de la version Rouge Feu et Vert Feuille ?",
-      "correct_answer_id": 1,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
-      "answers": [
-        {"id": 1, "label": "Tous"},
-        {"id": 2, "label": "Artikodin"},
-        {"id": 3, "label": "Sulfura"},
-        {"id": 4, "label": "Électhor"}
-      ]
-    },
-    {
-      "id": 9,
-      "label": "Quel Pokémon est connu pour évoluer en utilisant une Pierre Lune ?",
-      "correct_answer_id": 4,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png",
-      "answers": [
-        {"id": 1, "label": "Mélofée "},
-        {"id": 2, "label": "Rondoudou"},
-        {"id": 3, "label": "Pikachu"},
-        {"id": 4, "label": "Évoli"}
-      ]
-    },
-    {
-      "id": 10,
-      "label": "Quel est le Pokémon qui a une évolution différente selon la version du jeu (jour/nuit)?",
-      "correct_answer_id": 2,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/163.png",
-      "answers": [
-        {"id": 1, "label": "Étourmi"},
-        {"id": 2, "label": "Hoothoot"},
-        {"id": 3, "label": "Lixy"},
-        {"id": 4, "label": "Mystherbe"}
-      ]
-    },
-    {
-      "id": 11,
-      "label": "Quel Pokémon possède une évolution appelée 'Méga-Dracaufeu Y'?",
-      "correct_answer_id": 1,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png",
-      "answers": [
-        {"id": 1, "label": "Dracaufeu"},
-        {"id": 2, "label": "Reptincel"},
-        {"id": 3, "label": "Salamèche"},
-        {"id": 4, "label": "Méga-Dracaufeu x"}
-      ]
-    },
-    {
-      "id": 12,
-      "label": "Quel Pokémon est connu pour être le 'Gardien des océans'?",
-      "correct_answer_id": 3,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png",
-      "answers": [
-        {"id": 1, "label": "Kyogre"},
-        {"id": 2, "label": "Gyarados"},
-        {"id": 3, "label": "Lugia"},
-        {"id": 4, "label": "Wailord"}
-      ]
-    },
-    {
-      "id": 13,
-      "label": "Quel Pokémon est souvent associé à la glace et à la Team Mystic dans Pokémon GO?",
-      "correct_answer_id": 1,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
-      "answers": [
-        {"id": 1, "label": "Artikodin"},
-        {"id": 2, "label": "Lapras"},
-        {"id": 3, "label": "Jynx"},
-        {"id": 4, "label": "Cloyster"}
-      ]
-    },
-    {
-      "id": 14,
-      "label": "Quel Pokémon est connu pour être le 'Maître des illusions'?",
-      "correct_answer_id": 4,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png",
-      "answers": [
-        {"id": 1, "label": "Kadabra"},
-        {"id": 2, "label": "Alakazam"},
-        {"id": 3, "label": "Abra"},
-        {"id": 4, "label": "Mr. Mime"}
-      ]
-    },
-    {
-      "id": 15,
-      "label": "Quel Pokémon est souvent considéré comme le 'Dieu de la destruction'?",
-      "correct_answer_id": 2,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
-      "answers": [
-        {"id": 1, "label": "Mewtwo"},
-        {"id": 2, "label": "Arceus"},
-        {"id": 3, "label": "Giratina"},
-        {"id": 4, "label": "Darkrai"}
-      ]
-    },
-    {
-      "id": 16,
-      "label": "Quel Pokémon possède une évolution appelée 'Méga-Blizzaroi'?",
-      "correct_answer_id": 3,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-      "answers": [
-        {"id": 1, "label": "Carapuce"},
-        {"id": 2, "label": "Carabaffe"},
-        {"id": 3, "label": "Méga-Blizzaroi"},
-        {"id": 4, "label": "Tortank"}
-      ]
-    },
-    {
-      "id": 17,
-      "label": "Quel Pokémon est connu pour être le 'Maître des plantes'?",
-      "correct_answer_id": 4,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/154.png",
-      "answers": [
-        {"id": 1, "label": "Herbizarre"},
-        {"id": 2, "label": "Bulbizarre"},
-        {"id": 3, "label": "Florizarre"},
-        {"id": 4, "label": "Méganium"}
-      ]
-    },
-    {
-      "id": 18,
-      "label": "Quel est le Pokémon légendaire associé à la 3e génération et à la mer?",
-      "correct_answer_id": 1,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/382.png",
-      "answers": [
-        {"id": 1, "label": "Kyogre"},
-        {"id": 2, "label": "Rayquaza"},
-        {"id": 3, "label": "Groudon"},
-        {"id": 4, "label": "Manaphy"}
-      ]
-    },
-    {
-      "id": 19,
-      "label": "Quel Pokémon est souvent appelé 'Le génie du désert'?",
-      "correct_answer_id": 3,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/551.png",
-      "answers": [
-        {"id": 1, "label": "Sandshrew"},
-        {"id": 2, "label": "Trapinch"},
-        {"id": 3, "label": "Darumarond"},
-        {"id": 4, "label": "Cacnea"}
-      ]
-    },
-    {
-      "id": 20,
-      "label": "Quel Pokémon possède une évolution appelée 'Méga-Drattak'?",
-      "correct_answer_id": 2,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
-      "answers": [
-        {"id": 1, "label": "Amonita"},
-        {"id": 2, "label": "Amonistar"},
-        {"id": 3, "label": "Kabuto"},
-        {"id": 4, "label": "Kabutops"}
       ]
     }
   ]

@@ -12,8 +12,9 @@ import network.QuizRepo
 @Composable
 internal fun rootNavHost() {
 
-    val questions = QuizRepo().questionState.collectAsState()
-
+    val repo = QuizRepo()
+    val questions = repo.questionState.collectAsState()
+    val randomQuestions = repo.randomQuestionState.collectAsState()
     val navigator = rememberNavigator()
 
     NavHost(
@@ -31,6 +32,7 @@ internal fun rootNavHost() {
         scene(
             route = "/start",
         ) {
+            repo.updateRandomQuiz()
             StartScreen(navigator)
         }
         scene(
@@ -44,10 +46,8 @@ internal fun rootNavHost() {
         scene(
             route = "/quiz/random",
         ) {
-            QuizRepo().refreshRandomQuiz();
-            val questions = QuizRepo().randomQuestionState.collectAsState()
-            if (questions.value.isNotEmpty()) {
-                QuizScreen(navigator, questions.value)
+            if (randomQuestions.value.isNotEmpty()) {
+                QuizScreen(navigator, randomQuestions.value)
             }
         }
         scene(

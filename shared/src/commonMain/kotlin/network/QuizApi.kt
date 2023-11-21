@@ -21,7 +21,7 @@ class QuizAPI {
         }
     }
     suspend fun getQuiz(): Quiz {
-        return httpClient.get("https://raw.githubusercontent.com/Sygix/KMP-1/main/pokeQuiz.json").body()
+        return httpClient.get("https://raw.githubusercontent.com/Sygix/KMP-1/main/quiz/pokeQuiz.json").body()
     }
 
     suspend fun getRandomQuiz(): Quiz {
