@@ -65,7 +65,7 @@ kotlin {
         val desktopMain by getting {
             dependencies {
                 implementation(compose.desktop.common)
-                implementation("io.ktor:ktor-client-apache:2.3.9") // for Desktop
+                implementation("io.ktor:ktor-client-apache:2.3.6") // for Desktop
             }
         }
     }

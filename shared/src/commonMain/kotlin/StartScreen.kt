@@ -1,9 +1,7 @@
+
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.material.Card
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -11,7 +9,10 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Button
 import androidx.compose.material.ButtonDefaults
+import androidx.compose.material.Card
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.Text
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -40,7 +41,7 @@ fun StartScreen(navigator: Navigator) {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text("Quiz", fontSize = 24.sp, modifier = Modifier.padding(vertical = 5.dp))
-                Text("A simple Quiz to discovers KMP and compose.", modifier = Modifier.padding(vertical = 5.dp))
+                Text("A simple Pokémon Quiz", modifier = Modifier.padding(vertical = 5.dp))
                 Button(
                     onClick = { navigator.navigate("/quiz") },
                     modifier = Modifier.padding(vertical = 5.dp),
@@ -49,6 +50,15 @@ fun StartScreen(navigator: Navigator) {
                     elevation = ButtonDefaults.elevation(0.dp)
                 ){
                     Text("Start the Quiz")
+                }
+                Button(
+                    onClick = { navigator.navigate("/quiz/random") },
+                    modifier = Modifier.padding(vertical = 5.dp),
+                    shape = RoundedCornerShape(100),
+                    colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFFF3D00)),
+                    elevation = ButtonDefaults.elevation(0.dp)
+                ){
+                    Text("Start a Random Quiz")
                 }
             }
         }
