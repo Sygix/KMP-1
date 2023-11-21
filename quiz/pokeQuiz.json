@@ -220,7 +220,7 @@
       "id": 19,
       "label": "Quel Pokémon est souvent appelé 'Le génie du désert'?",
       "correct_answer_id": 3,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/554png",
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/554.png",
       "answers": [
         {"id": 1, "label": "Sandshrew"},
         {"id": 2, "label": "Trapinch"},
