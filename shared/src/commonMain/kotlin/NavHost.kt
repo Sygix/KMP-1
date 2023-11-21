@@ -42,6 +42,15 @@ internal fun rootNavHost() {
             }
         }
         scene(
+            route = "/quiz/random",
+        ) {
+            QuizRepo().refreshRandomQuiz();
+            val questions = QuizRepo().randomQuestionState.collectAsState()
+            if (questions.value.isNotEmpty()) {
+                QuizScreen(navigator, questions.value)
+            }
+        }
+        scene(
             route = "/score/{score}",
         ) { backStackEntry ->
             backStackEntry.path<String>("score")?.let { score ->

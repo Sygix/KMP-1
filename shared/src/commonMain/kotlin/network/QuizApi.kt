@@ -23,4 +23,14 @@ class QuizAPI {
     suspend fun getQuiz(): Quiz {
         return httpClient.get("https://raw.githubusercontent.com/Sygix/KMP-1/main/pokeQuiz.json").body()
     }
+
+    suspend fun getRandomQuiz(): Quiz {
+        val quizList = listOf(
+            "https://raw.githubusercontent.com/Sygix/KMP-1/main/quiz/pokeQuiz.json",
+            "https://raw.githubusercontent.com/Sygix/KMP-1/main/quiz/pokeQuiz2.json",
+            "https://raw.githubusercontent.com/Sygix/KMP-1/main/quiz/pokeQuiz3.json"
+        )
+        val randomQuiz = quizList.random();
+        return httpClient.get(randomQuiz).body()
+    }
 }
