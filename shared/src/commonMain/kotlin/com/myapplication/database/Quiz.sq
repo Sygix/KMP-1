@@ -1,0 +1,44 @@
+CREATE TABLE answers (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    label TEXT,
+    question_id INTEGER,
+    FOREIGN KEY (question_id) REFERENCES questions(id)
+);
+
+CREATE TABLE questions (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    label TEXT,
+    image_url TEXT,
+    correct_answer_id INTEGER,
+    quiz_id INTEGER,
+    FOREIGN KEY (correct_answer_id) REFERENCES answers(id),
+    FOREIGN KEY (quiz_id) REFERENCES quizes(id)
+);
+
+CREATE TABLE quizes (
+    id INTEGER PRIMARY KEY AUTOINCREMENT
+);
+
+insertQuiz:
+INSERT INTO quizes(id) VALUES (?);
+
+insertQuestion:
+INSERT INTO questions(label, image_url, quiz_id) VALUES (?, ?, ?);
+
+selectLastQuestionId:
+SELECT last_insert_rowid() AS question_id;
+
+insertAnswer:
+INSERT INTO answers(label, question_id) VALUES (?, ?);
+
+updateCorrectAnswer:
+UPDATE questions SET correct_answer_id = ? WHERE id = ?;
+
+selectQuiz:
+SELECT * FROM quizes WHERE id = ?;
+
+selectQuestion:
+SELECT * FROM questions WHERE id = ?;
+
+selectAnswers:
+SELECT * FROM answers WHERE question_id = ?;
