@@ -6,11 +6,6 @@ plugins {
     kotlin("plugin.serialization") version "1.9.20"
 }
 
-repositories {
-    google()
-    mavenCentral()
-}
-
 kotlin {
     androidTarget()
 
@@ -112,8 +107,9 @@ android {
 
 sqldelight {
     databases {
-        create("AppDatabase") {
-            packageName.set("com.myapplication.database.cache")
+        create("Database") {
+            packageName.set("com.myapplication.database")
+            listOf("sqldelight")
         }
     }
 }

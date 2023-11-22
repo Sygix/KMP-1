@@ -1,5 +1,3 @@
-package com.myapplication.database
-
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 import network.data.Answer
