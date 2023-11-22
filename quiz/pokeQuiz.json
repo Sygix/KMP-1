@@ -88,7 +88,7 @@
       "id": 8,
       "label": "Quel sont les Oiseaux légendaire emblématique de la version Rouge Feu et Vert Feuille ?",
       "correct_answer_id": 1,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/53.png",
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/144.png",
       "answers": [
         {"id": 1, "label": "Tous"},
         {"id": 2, "label": "Artikodin"},
@@ -160,7 +160,7 @@
       "id": 14,
       "label": "Quel Pokémon est connu pour être le 'Maître des illusions'?",
       "correct_answer_id": 4,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/196.png",
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/122.png",
       "answers": [
         {"id": 1, "label": "Kadabra"},
         {"id": 2, "label": "Alakazam"},
@@ -172,7 +172,7 @@
       "id": 15,
       "label": "Quel Pokémon est souvent considéré comme le 'Dieu de la destruction'?",
       "correct_answer_id": 2,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png",
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/493.png",
       "answers": [
         {"id": 1, "label": "Mewtwo"},
         {"id": 2, "label": "Arceus"},
@@ -184,7 +184,7 @@
       "id": 16,
       "label": "Quel Pokémon possède une évolution appelée 'Méga-Blizzaroi'?",
       "correct_answer_id": 3,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/460.png",
       "answers": [
         {"id": 1, "label": "Carapuce"},
         {"id": 2, "label": "Carabaffe"},
@@ -220,7 +220,7 @@
       "id": 19,
       "label": "Quel Pokémon est souvent appelé 'Le génie du désert'?",
       "correct_answer_id": 3,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/551.png",
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/554.png",
       "answers": [
         {"id": 1, "label": "Sandshrew"},
         {"id": 2, "label": "Trapinch"},
@@ -232,11 +232,11 @@
       "id": 20,
       "label": "Quel Pokémon possède une évolution appelée 'Méga-Drattak'?",
       "correct_answer_id": 2,
-      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/147.png",
+      "image_url": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/373.png",
       "answers": [
         {"id": 1, "label": "Amonita"},
         {"id": 2, "label": "Amonistar"},
-        {"id": 3, "label": "Kabuto"},
+        {"id": 3, "label": "Drattak"},
         {"id": 4, "label": "Kabutops"}
       ]
     }
