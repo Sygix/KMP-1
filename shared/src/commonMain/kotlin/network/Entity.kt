@@ -2,6 +2,7 @@ package network
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
+import kotlinx.serialization.Transient
 
 @Serializable
 data class Answer(
@@ -29,6 +30,9 @@ data class Question(
 data class Quiz(
     @SerialName("id")
     val id: Int,
+    @SerialName("created_at")
+    @Transient
+    val createdAt: Long = 0,
     @SerialName("questions")
     var questions: List<Question>
 )

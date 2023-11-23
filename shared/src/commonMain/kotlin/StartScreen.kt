@@ -43,7 +43,7 @@ fun StartScreen(navigator: Navigator) {
                 Text("Quiz", fontSize = 24.sp, modifier = Modifier.padding(vertical = 5.dp))
                 Text("A simple Pokémon Quiz", modifier = Modifier.padding(vertical = 5.dp))
                 Button(
-                    onClick = { navigator.navigate("/quiz") },
+                    onClick = { navigator.navigate("/quiz/1") },
                     modifier = Modifier.padding(vertical = 5.dp),
                     shape = RoundedCornerShape(100),
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFFF3D00)),
@@ -52,7 +52,12 @@ fun StartScreen(navigator: Navigator) {
                     Text("Start the Quiz")
                 }
                 Button(
-                    onClick = { navigator.navigate("/quiz/random") },
+                    onClick = {
+                        repo.updateRandomQuiz()
+                        if (repo.randomQuizState.value.isNotEmpty()) {
+                            navigator.navigate("/quiz/random")
+                        }
+                    },
                     modifier = Modifier.padding(vertical = 5.dp),
                     shape = RoundedCornerShape(100),
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFFF3D00)),
