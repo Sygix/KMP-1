@@ -18,6 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import moe.tlaster.precompose.navigation.Navigator
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -53,9 +56,16 @@ fun StartScreen(navigator: Navigator) {
                 }
                 Button(
                     onClick = {
-                        repo.updateRandomQuiz()
-                        if (repo.randomQuizState.value.isNotEmpty()) {
-                            navigator.navigate("/quiz/random")
+                        runBlocking {
+                            launch {
+                                repo.updateRandomQuiz()
+                                // Attendez jusqu'à ce que la valeur soit disponible ou après un certain délai
+                                while (repo.randomQuizState.value.isEmpty()) {
+                                    delay(100) // Attendez 100 millisecondes avant de vérifier à nouveau
+                                }
+                                // Une fois que la valeur est disponible, naviguez vers la page "quiz/random"
+                                navigator.navigate("/quiz/random")
+                            }
                         }
                     },
                     modifier = Modifier.padding(vertical = 5.dp),
