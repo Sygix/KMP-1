@@ -1,7 +1,7 @@
+package network
+
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
-import network.data.Answer
-import network.data.Question
 
 @Serializable
 data class Answer(
@@ -30,5 +30,5 @@ data class Quiz(
     @SerialName("id")
     val id: Int,
     @SerialName("questions")
-    val questions: List<Question>
+    var questions: List<Question>
 )

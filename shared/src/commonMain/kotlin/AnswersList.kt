@@ -13,7 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.composed
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
-import network.data.Answer
+import network.Answer
 
 @Composable
 fun AnswersList(answers: List<Answer>, selectedAnswer: Int, onAnswerSelected: (Int) -> Unit) {

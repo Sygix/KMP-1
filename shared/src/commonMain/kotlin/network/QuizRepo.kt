@@ -5,7 +5,6 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import network.data.Question
 
 class QuizRepo()  {
     private val coroutineScope = CoroutineScope(Dispatchers.Default)
