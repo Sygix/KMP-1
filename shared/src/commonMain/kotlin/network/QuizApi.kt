@@ -19,17 +19,20 @@ class QuizAPI {
                 })
         }
     }
-    suspend fun getQuiz(): Quiz {
-        return httpClient.get("https://raw.githubusercontent.com/Sygix/KMP-1/main/quiz/pokeQuiz.json").body()
-    }
-
-    suspend fun getRandomQuiz(): Quiz {
+    suspend fun getAllQuizes(): List<Quiz> {
         val quizList = listOf(
             "https://raw.githubusercontent.com/Sygix/KMP-1/main/quiz/pokeQuiz.json",
             "https://raw.githubusercontent.com/Sygix/KMP-1/main/quiz/pokeQuiz2.json",
             "https://raw.githubusercontent.com/Sygix/KMP-1/main/quiz/pokeQuiz3.json"
         )
-        val randomQuiz = quizList.random();
-        return httpClient.get(randomQuiz).body()
+        val quizes = quizList.map { url ->
+            try {
+                val quiz = httpClient.get(url).body<Quiz>()
+                quiz
+            } catch (e: Exception) {
+                null
+            }
+        }
+        return quizes.filterNotNull()
     }
 }

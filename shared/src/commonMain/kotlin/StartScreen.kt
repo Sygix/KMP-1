@@ -18,6 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 import moe.tlaster.precompose.navigation.Navigator
 
 @OptIn(ExperimentalMaterialApi::class)
@@ -43,7 +46,7 @@ fun StartScreen(navigator: Navigator) {
                 Text("Quiz", fontSize = 24.sp, modifier = Modifier.padding(vertical = 5.dp))
                 Text("A simple Pokémon Quiz", modifier = Modifier.padding(vertical = 5.dp))
                 Button(
-                    onClick = { navigator.navigate("/quiz") },
+                    onClick = { navigator.navigate("/quiz/1") },
                     modifier = Modifier.padding(vertical = 5.dp),
                     shape = RoundedCornerShape(100),
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFFF3D00)),
@@ -52,7 +55,19 @@ fun StartScreen(navigator: Navigator) {
                     Text("Start the Quiz")
                 }
                 Button(
-                    onClick = { navigator.navigate("/quiz/random") },
+                    onClick = {
+                        runBlocking {
+                            launch {
+                                repo.updateRandomQuiz()
+                                // Attendez jusqu'à ce que la valeur soit disponible ou après un certain délai
+                                while (repo.randomQuizState.value.isEmpty()) {
+                                    delay(100) // Attendez 100 millisecondes avant de vérifier à nouveau
+                                }
+                                // Une fois que la valeur est disponible, naviguez vers la page "quiz/random"
+                                navigator.navigate("/quiz/random")
+                            }
+                        }
+                    },
                     modifier = Modifier.padding(vertical = 5.dp),
                     shape = RoundedCornerShape(100),
                     colors = ButtonDefaults.buttonColors(backgroundColor = Color(0xFFFF3D00)),

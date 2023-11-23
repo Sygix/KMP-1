@@ -30,39 +30,44 @@ internal class QuizDatabase(databaseDriverFactory: DriverFactory) {
                 label = questionEntity.label,
                 correctAnswerId = correctAnswerId,
                 imageUrl = questionEntity.image_url,
-                answers = answers.map { Answer(it.id.toInt(), it.label) }
+                answers = answers.map { Answer(it.id, it.label) }
             )
         }
     }
 
     internal fun getQuizes(): List<Quiz> {
         return dbQuery.selectAllQuizes().executeAsList().map { quizEntity ->
-            val quizId = quizEntity.toInt()
+            val quizId = quizEntity.id.toInt()
             val questions = getQuestionsByQuizId(quizId)
 
             Quiz(
                 id = quizId,
+                createdAt = quizEntity.created_at,
                 questions = questions
             )
         }
     }
 
-//    internal fun insertQuiz(quiz: Quiz) {
-//        dbQuery.transaction {
-//            dbQuery.insertQuiz(quiz.id.toLong())
-//            quiz.questions.forEach { question ->
-//                dbQuery.insertQuestion(
-//                    question.id.toLong(),
-//                    quiz.id.toLong(),
-//                    question.label,
-//                    question.correctAnswerId.toLong(),
-//                    question.imageUrl
-//                )
-//                question.answers.forEach { answer ->
-//                    dbQuery.insertAnswer(answer.id.toLong(), question.id.toLong(), answer.label)
-//                }
-//            }
-//        }
-//    }
+    internal fun insertQuiz(quiz: Quiz) {
+        dbQuery.transaction {
+            dbQuery.insertQuiz(quiz.id.toLong())
+            quiz.questions.forEach { question ->
+                dbQuery.insertQuestion(
+                    question.label,
+                    question.imageUrl,
+                    quiz.id.toLong(),
+                )
+                val questionId = dbQuery.selectLastQuestionId().executeAsOne()
+
+                question.answers.forEach { answer ->
+                    dbQuery.insertAnswer(answer.label, questionId)
+                    if(answer.id == question.correctAnswerId) {
+                        val answerId = dbQuery.selectLastAnswerId().executeAsOne()
+                        dbQuery.updateCorrectAnswer(answerId, questionId)
+                    }
+                }
+            }
+        }
+    }
 
 }

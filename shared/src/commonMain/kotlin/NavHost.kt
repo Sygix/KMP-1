@@ -9,12 +9,13 @@ import moe.tlaster.precompose.navigation.rememberNavigator
 import moe.tlaster.precompose.navigation.transition.NavTransition
 import network.QuizRepo
 
+val repo = QuizRepo()
+
 @Composable
 internal fun rootNavHost() {
 
-    val repo = QuizRepo()
-    val questions = repo.questionState.collectAsState()
-    val randomQuestions = repo.randomQuestionState.collectAsState()
+    val quizes = repo.quizesState.collectAsState()
+    val randomQuiz = repo.randomQuizState.collectAsState()
     val navigator = rememberNavigator()
 
     NavHost(
@@ -32,23 +33,23 @@ internal fun rootNavHost() {
         scene(
             route = "/start",
         ) {
-            repo.updateRandomQuiz()
             StartScreen(navigator)
         }
         scene(
-            route = "/quiz",
-        ) {
-
-            if (questions.value.isNotEmpty()) {
-                QuizScreen(navigator, questions.value)
+            route = "/quiz/{quizId}",
+        ) {backStackEntry ->
+            backStackEntry.path<String>("quizId")?.let { quizId ->
+                if(quizes.value.find { it.id == quizId.toInt() } != null){
+                    QuizScreen(navigator, quizes.value.find { it.id == quizId.toInt() }!!.questions)
+                } else {
+                    QuizScreen(navigator, quizes.value[0].questions)
+                }
             }
         }
         scene(
             route = "/quiz/random",
         ) {
-            if (randomQuestions.value.isNotEmpty()) {
-                QuizScreen(navigator, randomQuestions.value)
-            }
+            QuizScreen(navigator, randomQuiz.value)
         }
         scene(
             route = "/score/{score}",

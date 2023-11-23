@@ -16,7 +16,8 @@ CREATE TABLE question (
 );
 
 CREATE TABLE quizes (
-    id INTEGER PRIMARY KEY AUTOINCREMENT
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    created_at INTEGER NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
 insertQuiz:
@@ -30,6 +31,9 @@ SELECT last_insert_rowid() AS question_id;
 
 insertAnswer:
 INSERT INTO answer(label, question_id) VALUES (?, ?);
+
+selectLastAnswerId:
+SELECT last_insert_rowid() AS answer_id;
 
 updateCorrectAnswer:
 UPDATE question SET correct_answer_id = ? WHERE id = ?;
