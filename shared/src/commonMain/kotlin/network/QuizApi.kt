@@ -7,7 +7,6 @@ import io.ktor.client.request.get
 import io.ktor.http.ContentType
 import io.ktor.serialization.kotlinx.json.json
 import kotlinx.serialization.json.Json
-import network.data.Quiz
 
 class QuizAPI {
     private val httpClient = HttpClient {

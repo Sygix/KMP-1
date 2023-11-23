@@ -30,7 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.seiko.imageloader.rememberImagePainter
 import moe.tlaster.precompose.navigation.Navigator
-import network.data.Question
+import network.Question
 
 @Composable
 fun QuizScreen(navigator: Navigator, questions: List<Question>) {
